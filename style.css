@@ -1,0 +1,498 @@
+/* Body and font */
+body {
+      font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: #002c77;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-logo {
+  width: 80px;
+  height: auto;
+}
+
+.header-top h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+/* Matching Login Section */
+#loginSection {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#loginSection h2 {
+  color: #002c77;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+/* Login Form*/
+#loginForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#loginForm label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: left;
+}
+
+#loginForm input {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#loginForm button {
+  background-color: #b70320;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#loginForm button:hover {
+  background-color: #002c77;
+  transform: scale(1.03);
+}
+
+.login-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  color: #fff;
+  backdrop-filter: blur(10px); 
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  white-space: nowrap;
+  animation: popIn 0.3s ease-out;
+  transition: transform 0.2s ease;
+}
+
+.login-subtext {
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-top: 7px;
+  color: #303030
+}
+
+.login-container:hover {
+  transform: scale(1.05);
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  80% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+.login-container .welcome-text strong {
+  color: #fff;
+}
+
+
+
+/* Buttons */
+.button-container {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button-container button {
+  font-family: Arial, sans-serif;
+  padding: 8px 40px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid #FFFFFF;
+  border-radius: 0px;
+  background-color: #b70320;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+  border-color: #003f7f;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+}
+
+.hero h1 {
+  font-weight: normal;
+  font-size: 22px;
+}
+
+.hero hr {
+  width: 80%;
+  margin-top: 0px;
+  border: none;
+  height: 1.2px;
+  background-color: #cccccc;
+}
+
+/* Form & Sections */
+section {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+section h2, section h3, section h4, section h5, section h6 {
+  color: #002c77;
+}
+
+/* Lost Form */
+#lostForm {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px 20px;
+}
+
+#lostForm label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+#lostForm select,
+#lostForm input[type="text"],
+#lostForm input[type="file"] {
+  margin-top: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Submit Button */
+#lostForm button[type="submit"] {
+  grid-column: span 3;
+  justify-self: center;
+  background-color: #b70320;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+#lostForm button[type="submit"]:hover {
+  background-color: #002c77;
+}
+
+/* List Items */
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;  
+}
+
+ul li {
+  display: inline-block;
+  min-width: 250px;
+  max-width: 300px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  vertical-align: top;
+  word-wrap: break-word;
+}
+
+ul li img {
+  display: block;
+  margin-top: 5px;
+  max-width: 150px;
+  border-radius: 5px;
+}
+
+/* Claim Buttons in list */
+.claimBtn {
+  background-color: #002c77;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.claimBtn:hover {
+  background-color: #b70320;
+}
+
+/* Questions & Report Forms */
+#questionForm label,
+#reportForm label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#questionForm input,
+#reportForm input {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+#questionForm button,
+#reportForm button {
+  background-color: #002c77;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#questionForm button:hover,
+#reportForm button:hover {
+  background-color: #b70320;
+}
+
+/* Label and input take a full row */
+#lostForm label[for="dateWhenItemwasFound"] {
+  grid-column: span 3;
+  margin-bottom: 5px;
+}
+
+#dateWhenItemwasFound {
+  grid-column: span 3;
+  margin-top: 0;
+}
+
+/* Section titles the same size */
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #002c77;
+  margin-bottom: 30px;
+}
+
+.lost-subtext {
+  font-size: 18px;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  font-weight: bold; 
+  color: #d40000
+}
+
+/* Back to Top */
+.backtotop {
+  background-color: #555555;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+/* Hover */
+.backtotop:hover {
+  background-color: #b30000;
+}
+
+/* Makes sections position the button correctly */
+section {
+  position: relative;
+  padding-bottom: 60px;
+}
+
+/* Welcome Text */
+.welcome-text {
+  color: white;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+/* Question Section input */
+.question-box {
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Replies container */
+.question-box .replies {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+/* Reply input and button */
+.question-box .reply-input {
+  width: 70%;
+  padding: 5px;
+  margin-top: 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.question-box .reply-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  border: none;
+  background-color: #002c77;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.question-box .reply-btn:hover {
+  background-color: #b70320;
+}
+
+/* Replies smaller font */
+.question-box .reply-text {
+  font-size: 15px;
+  margin: 3px 0;
+}
+
+.question-box .replies-label {
+  font-weight: bold;
+  color: #002c77;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* Delete Button */
+.deleteBtn {
+  background-color: #002c77;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  display: inline-block
+}
+
+.deleteBtn:hover {
+  background-color: #b70320;
+
+
+
+/*MORE QUESTION STUFF*/
+/* Delete icon for questions and replies */
+.delete-btn {
+  color: #b70320;
+  font-size: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.delete-btn:hover {
+  color: #002c77;
+}
+
+/* Replies & delete buttons align */
+.reply-text {
+  margin: 0;
+  font-size: 13px;
+}
+
+.replies > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/*Mobile Responsiveness*/
+@media (max-width: 768px) {
+  #lostForm {
+    grid-template-columns: 1fr;
+  }
+  
+  .button-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  ul li {
+    min-width: 100%;
+    max-width: 100%;
+  }
+}
+
+/*Image hover*/  
+ul li img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
