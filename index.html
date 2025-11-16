@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Lost & Found</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+<header>
+
+ <!--Top Right Login-->
+<div class="login-container" style="position:absolute; top:10px; right:10px;"></div>
+
+
+  <div class="header-top">
+    <img src="https://i.imgur.com/8e3CW7T.png" alt="School Logo" class="header-logo">
+    <h1>Centennial High School Lost and Found</h1>
+  </div>
+  
+<!--Header-->
+  <div class="button-container">
+    <button id="formBtn">Submit Lost Item</button>
+    <button id="listBtn">Lost Items</button>
+    <button id="claimBtn">Claimed Items</button>
+    <button id="inquiryBtn">Questions</button>
+    <button id="reportBtn">Report Wrongfully Claimed Items</button>
+  </div>
+  </header>
+  
+ <!--Welcome Text-->
+<section class="hero">
+  <h1>WELCOME TO THE LOST & FOUND</h1>
+  <hr>
+</section>
+
+  <!-- Login Seciton -->
+<section id="loginSection">
+  <h2>Login to Access Lost & Found</h2>
+  
+  <form id="loginForm">
+    <label>Full Name:
+      <input type="text" id="loginName" placeholder="Enter your full name" required>
+    </label>
+    <label>School Email:
+      <input type="email" id="loginEmail" placeholder="Enter your school email" required>
+    </label>
+    <button type="submit" id="loginBtn">Log In</button>
+  <p class="login-subtext">(Please be respectful and honest when using this website. Any inappropriate behavior will be reported).</p>
+  </form>
+</section>
+
+ <!-- Lost Items Form --> 
+    <section id="formSection" class="hidden">
+      <h2>Submit Lost Item</h2>
+      <form id="lostForm">
+        <label for="founddate">Date when item was found:</label>
+<input type="date" id="found"required>
+
+        <label>Item type:
+<select id="item" required >
+   <option value=""disabled selected>Select Item</option>
+  <option value="Shirt">Shirt</option>
+   <option value="Hoodie">Hoodie</option>
+   <option value="Pants">Pants</option>
+   <option value="Water Bottle">Water Bottle</option>
+   <option value="Shoes">Shoes</option>
+    <option value="Jewelry">Jewelry</option>
+   <option value="Jacket">Jacket</option>
+   <option value="Electronic Device">Electronic Device</option>
+   <option value="Other">Other</option>
+  </select>
+</label>
+        <label>Item color: 
+<select id="filtercolor" required >
+    <option value=""disabled selected>Select Color</option>
+     <option value="Orange">Orange</option>
+ <option value="Red">Red</option>
+  <option value="Blue">Blue</option>
+ <option value="Green">Green</option>
+ <option value="Yellow">Yellow</option>
+ <option value="Purple">Purple</option>
+  <option value="White">White</option>
+  <option value="Grey">Grey</option>
+  <option value="Brown">Brown</option>
+  <option value="Black">Black</option>
+  <option value="Pink">Pink</option>
+  <option value="Other">Other</option>
+ </select>
+</label>
+
+        <label>Where the item was found: 
+<select id="place" required >
+  <option value=""disabled selected>Select Location</option>
+ <option value="Gym">Gym</option>           
+   <option value="Cafeteria">Cafeteria</option>
+ <option value="Media Center">Media Center</option>
+ <option value="Classroom">Classroom</option>
+ <option value="Portable">Portable</option>
+   <option value="Auditorium">Auditorium</option>
+  <option value="Hallways">Hallways</option>
+  <option value="Parking Lot">Parking Lot</option>
+ <option value="Other">Other</option>
+ </select>
+</label>
+
+        <label>Image of the item: <input type="file" id="uploadimage" accept="image/*"multiple required  > </label>                        
+ <button type="submit">Submit</button>
+      </form>
+<button class="backtotop">Back to Top</button>
+    </section>
+  
+<!-- Lost Items Section-->
+<section id="listSection" class="hidden">
+  <h3>Lost Items</h3>
+   <p class="lost-subtext">(All Lost Items will be in the Front Office)</p>
+    
+      <select id="type">
+  <option value="Select Item Type">Select Item Type</option>
+     <option value="Hoodie">Hoodie</option>
+  <option value="Shirt">Shirt</option>
+   <option value="Water Bottle">Water Bottle</option>
+        <option value="Jacket">Jacket</option>
+     <option value="Pants">Pants</option>
+   <option value="Jewelry">Jewelry</option>
+  <option value="Shoes">Shoes</option>
+   <option value="Electronic Device">Electronic Device</option>
+      <option value="Other">Other</option>
+  </select>
+    <select id="color">
+     <option value="Select Color">Select Color</option>
+ <option value="Red">Red</option>
+   <option value="Orange">Orange</option>
+   <option value="Yellow">Yellow</option>
+    <option value="Green">Green</option>
+ <option value="Blue">Blue</option>
+   <option value="Purple">Purple</option>
+ <option value="White">White</option>
+    <option value="Grey">Grey</option>
+ <option value="Black">Black</option>
+ <option value="Brown">Brown</option>
+   <option value="Pink">Pink</option>
+  <option value="Other">Other</option>
+</select>
+    <select id="location">
+    <option value="Select Location">Select Location</option>
+   <option value="Cafeteria">Cafeteria</option>     
+
+ <option value="Gym">Gym</option>
+    <option value="Classroom">Classroom</option>
+ <option value="Portable">Portable</option>
+     <option value="Bathroom">Bathroom</option>
+     <option value="Parking Lot">Parking Lot</option>
+   <option value="Hallways">Hallways</option>
+ <option value="Auditorium">Auditorium</option>
+   <option value="Media Center">Media Center</option>
+ <option value="Other">Other</option>
+</select> 
+     <ul id="itemList"></ul>
+  <button class="backtotop">Back to  Top</button>
+  
+    </section>
+
+<!-- Claimed Items Section-->  
+<section id="claimed" class="hidden">
+ <h4>Claimed Items</h4>
+   <select id="filteritem">
+     <option value="Select Item Type">Select Item Type</option>
+  <option value="Shoes">Shoes</option>
+     <option value="Jacket">Jacket</option>
+    <option value="Pants">Pants</option>
+ <option value="Shirt">Shirt</option>
+  <option value="Hoodie">Hoodie</option>
+   <option value="Jewelry">Jewelry</option>
+ <option value="Electronic Device">Electronic Device</option>
+   <option value="Water Bottle">Water Bottle</option>
+  <option value="Other">Other</option>
+</select>
+    <select id="colorfilter">
+    <option value="Select Color">Select Color</option>
+ <option value="Purple">Purple</option>
+   <option value="Pink">Pink</option>
+<option value="Green">Green</option>
+    <option value="Red">Red</option>
+ <option value="White">White</option>
+    <option value="Brown">Brown</option>
+  <option value="Grey">Grey</option>
+  <option value="Black">Black</option>
+ <option value="Orange">Orange</option>
+  <option value="Blue">Blue</option>
+<option value="Yellow">Yellow</option>
+  <option value="Other">Other</option>
+</select>
+    <select id="filterlocation">
+     <option value="Select Location">Select Location</option>
+      <option value="Media Center">Media Center</option>       
+  <option value="Gym">Gym</option>
+ <option value="Cafeteria">Cafeteria</option>
+    <option value="Bathroom">Bathroom</option>
+<option value="Auditorium">Auditorium</option>
+    <option value="Classroom">Classroom</option>
+  <option value="Portable">Portable</option>
+    <option value="Parking Lot">Parking Lot</option>
+<option value="Hallways">Hallways</option>
+     <option value="Other">Other</option>
+</select>
+   <ul id="claimeditemList"></ul>
+  <button class="backtotop">Back to  Top</button>
+  </section>
+  
+<!-- Questions Seciton-->
+<section id="question" class="hidden">
+  <h5>Questions</h5>
+  <form id="questionForm">
+   <label>Question(s): <input type="text" id="questions" placeholder="Enter Here" required ></label>
+  <button type="submit">Submit</button>
+    <ul id="listofquestions">
+    
+  </ul>
+  </form>
+  <button class="backtotop">Back to Top</button>
+  </section>
+    <ul id="totalquestions">
+    
+  </ul>
+
+<!-- Report Section-->
+<section id="reportSection" class="hidden">
+   <h6>Report wrongfully claimed item(s)</h6>
+   <form id="reportForm">
+     <label>The Specific Item: <input type="text" id="theitem" placeholder="Exact Item" required ></label>
+     <label>Reason for the Report: <input type="text" id="reason" placeholder="Reason" required ></label>
+     <label>Actual Owner (first and last name): <input type="text" id="belong" placeholder="Full Name" required></label>
+     <button type="submit">Submit</button>
+     <ul id="listofreports"></ul>
+  </form>
+ <button class="backtotop">Back to Top</button>
+ </section>
+<script src="script.js"></script>
+  </body>
+</html>
